@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 /**
  * @author gavinhashemi
  */
-@Description("This is a constructor DI without using Spring Framework")
+@Description("This is a constructor DI without using Spring Frameworkin this case, you don't need Controller anotation")
 class ConstructorInjectedControllerTest {
 
     ConstructorInjectedController controller;
