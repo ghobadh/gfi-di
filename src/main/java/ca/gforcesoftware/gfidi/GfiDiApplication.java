@@ -21,9 +21,8 @@ public class GfiDiApplication {
 		 */
 		MyController myController = (MyController) ctx.getBean("myController");
 
-		String greeting = myController.sayHello();
-
-		System.out.println(greeting);
+		System.out.println("-------- Primary ");
+		System.out.println(myController.sayHello());
 
 		/*
 		This part is for using DI with Spring Framework
