@@ -1,9 +1,6 @@
 package ca.gforcesoftware.gfidi;
 
-import ca.gforcesoftware.gfidi.controller.ConstructorInjectedController;
-import ca.gforcesoftware.gfidi.controller.MyController;
-import ca.gforcesoftware.gfidi.controller.PropertyInjectedController;
-import ca.gforcesoftware.gfidi.controller.SetterInjectedController;
+import ca.gforcesoftware.gfidi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -14,6 +11,13 @@ public class GfiDiApplication {
 	public static void main(String[] args) {
 
 		ApplicationContext ctx = SpringApplication.run(GfiDiApplication.class, args);
+
+		I18nController i18nController= (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
+
+
+
+
 		/*
 		This is an example of Dependency Injection..
 		Instead of creation of myController object in the class, we create a bean.
